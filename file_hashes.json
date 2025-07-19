@@ -1,0 +1,112 @@
+{
+  "requirements.txt": {
+    "hash": "ca5b9fa1",
+    "modified": "2025-07-19T18:05:07.418627",
+    "uploaded": false
+  },
+  "Dockerfile": {
+    "hash": "208e791b",
+    "modified": "2025-07-19T18:05:07.418791",
+    "uploaded": false
+  },
+  "README.md": {
+    "hash": "e72ac42a",
+    "modified": "2025-07-19T18:05:07.418925",
+    "uploaded": false
+  },
+  "DEPLOYMENT_GUIDE.md": {
+    "hash": "274565c1",
+    "modified": "2025-07-19T18:05:07.419056",
+    "uploaded": false
+  },
+  ".gitignore": {
+    "hash": "48339e45",
+    "modified": "2025-07-19T18:05:07.419119",
+    "uploaded": false
+  },
+  "docker-compose.yml": {
+    "hash": "4c1937fa",
+    "modified": "2025-07-19T18:05:07.419263",
+    "uploaded": false
+  },
+  "test_api.py": {
+    "hash": "0f4316c8",
+    "modified": "2025-07-19T18:05:07.419885",
+    "uploaded": false
+  },
+  "pf1_comprehensive_extractor.py": {
+    "hash": "cbb7cb15",
+    "modified": "2025-07-19T18:05:07.420037",
+    "uploaded": false
+  },
+  ".env.example": {
+    "hash": "e9455973",
+    "modified": "2025-07-19T18:05:07.420083",
+    "uploaded": false
+  },
+  "check_updates.py": {
+    "hash": "b44ca4b8",
+    "modified": "2025-07-19T18:05:07.420114",
+    "uploaded": false
+  },
+  "main.py": {
+    "hash": "5c3c5c1b",
+    "modified": "2025-07-19T18:05:07.420236",
+    "uploaded": false
+  },
+  "pf1_quote_extractor_full.py": {
+    "hash": "5142ce8a",
+    "modified": "2025-07-19T18:05:07.420352",
+    "uploaded": false
+  },
+  "railway.json": {
+    "hash": "a20cd611",
+    "modified": "2025-07-19T18:05:07.420459",
+    "uploaded": false
+  },
+  "upload_versions.md": {
+    "hash": "e97a2011",
+    "modified": "2025-07-19T18:05:07.420570",
+    "uploaded": false
+  },
+  "test_pdfs/PF1_Commercial_Specifications_Complete.xlsx": {
+    "hash": "09a4039c",
+    "modified": "2025-07-19T18:05:07.420744",
+    "uploaded": false
+  },
+  "test_pdfs/PF1_Machine_Specifications.xlsx": {
+    "hash": "dcb0acab",
+    "modified": "2025-07-19T18:05:07.420880",
+    "uploaded": false
+  },
+  "test_pdfs/PF1_Basic_Machine_Details_Complete.xlsx": {
+    "hash": "18978e2d",
+    "modified": "2025-07-19T18:05:07.421030",
+    "uploaded": false
+  },
+  "test_pdfs/PF1_Technical_Specifications_Complete.xlsx": {
+    "hash": "60e244de",
+    "modified": "2025-07-19T18:05:07.421324",
+    "uploaded": false
+  },
+  "test_pdfs/PF1_Commercial_Specifications_Test.xlsx": {
+    "hash": "37fb4cb9",
+    "modified": "2025-07-19T18:05:07.421596",
+    "uploaded": false
+  },
+  "schemas/column_suggestions.csv": {
+    "hash": "9ec1f242",
+    "modified": "2025-07-19T18:05:07.421895",
+    "uploaded": false
+  },
+  "schemas/field_map.json": {
+    "hash": "f7198760",
+    "modified": "2025-07-19T18:05:07.422175",
+    "uploaded": false
+  },
+  "prompts/invoice_prompt.txt": {
+    "hash": "fe664da1",
+    "modified": "2025-07-19T18:05:07.422434",
+    "uploaded": false
+  }
+}
