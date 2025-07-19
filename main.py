@@ -13,6 +13,7 @@ from pf1_comprehensive_extractor import (
     extract_text_pdfco
 )
 from pf1_quote_extractor_full import extract_quotes_from_text
+from upload_router import router as upload_router
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -33,6 +34,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Include upload router
+app.include_router(upload_router)
 
 # Request models
 class PDFExtractionRequest(BaseModel):
