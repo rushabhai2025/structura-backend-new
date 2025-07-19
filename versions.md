@@ -1,89 +1,71 @@
-# 📦 Structura.AI Backend - Version Tracking
+# 📁 Upload to GitHub - Version Tracking
 
-**Last Updated**: 2024-07-19 18:10 UTC  
-**Status**: 🟡 Ready for GitHub upload
+## 🎯 Purpose
+This folder contains files ready for manual upload to GitHub repository: `structura-backend-new`
 
----
+## 📋 File Checklist
+
+### ✅ Ready for GitHub Upload
+- [ ] **upload_with_supabase_debug.tsx** — v1.0.0 — Added insert payload debug logging
+- [ ] **versions.md** — v1.0.0 — Version tracking manifest
 
 ## 🔄 Version History
 
-### v1.3.0 (2024-07-19 18:15) - Multiple File Upload Support
-- ✅ **upload_router.py** - New router for multiple PDF file uploads
-- ✅ **Multiple file support**: Accepts unlimited PDF files per request
+### v1.0.0 (2024-07-19 19:00) - Supabase Debug Upload Component
+- ✅ **upload_with_supabase_debug.tsx** - React component with Supabase integration
+- ✅ **Debug logging**: Comprehensive console logging for 422 error diagnosis
+- ✅ **Multiple file upload**: Support for multiple PDF files
 - ✅ **Category selection**: Technical, commercial, basic, or all categories
-- ✅ **Form data handling**: Category as form field, files as multipart
-- ✅ **CORS enabled**: Ready for Lovable frontend integration
-- ✅ **File validation**: PDF type and 10MB size limit
-- ✅ **Dummy extraction**: Returns structured data for testing
+- ✅ **Error handling**: Detailed error reporting and validation
+- ✅ **Supabase integration**: Storage upload + database insert
+- ✅ **Payload validation**: Logs exact data being sent to Supabase
 
-### v1.2.1 (2024-07-19 18:10) - CORS Enabled
-- ✅ **main.py** - CORS middleware enabled for frontend integration
-- ✅ **CORS Configuration**: 
-  - `allow_origins=["*"]` - Allow all origins (development)
-  - `allow_credentials=True` - Allow credentials
-  - `allow_methods=["*"]` - Allow all HTTP methods
-  - `allow_headers=["*"]` - Allow all headers
-- ✅ **Health endpoint**: `/health` returns proper JSON response
-- ✅ **Comprehensive extractor**: Integrated technical, commercial, and basic extractors
-- ✅ **Railway ready**: All configuration files present
+## 🚀 Key Features
 
-### v1.2.0 (2024-07-19 17:45) - Health Endpoint Fixed
-- ✅ Fixed health endpoint import issues
-- ✅ Added missing dependencies (openai, pandas, openpyxl)
-- ✅ Fixed quote extractor import
-- ✅ All files ready for Railway deployment
-
-### v1.1.0 (2024-07-19 16:48) - Comprehensive Extraction
-- ✅ Added comprehensive PDF extraction
-- ✅ Integrated technical, commercial, and basic extractors
-- ✅ Added health and info endpoints
-
-### v1.0.0 (2024-07-19 16:39) - Initial Setup
-- ✅ Initial FastAPI backend setup
-- ✅ Basic quote extraction functionality
-- ✅ Railway deployment configuration
-
----
-
-## 📋 Upload Checklist
-
-### ✅ Ready for GitHub Upload
-- [x] **main.py** v1.3.0 - Multiple file upload support, CORS enabled
-- [x] **upload_router.py** v1.0.0 - New router for file uploads
-- [x] **requirements.txt** v1.1.0 - All dependencies included
-- [x] **railway.json** v1.0.0 - Railway deployment config
-- [x] **Dockerfile** v1.0.0 - Container configuration
-- [x] **README.md** v1.0.0 - Project documentation
-
-### 🔄 Next Steps
-1. **Upload to GitHub**: https://github.com/rushabhai2025/structura-backend-new
-2. **Commit Message**: "Added multiple file upload support — v1.3.0"
-3. **Railway Deployment**: Auto-redeploy after GitHub push
-4. **Test Upload Endpoint**: `https://your-app.railway.app/uploadfile/`
-5. **Test with Lovable UI**: Frontend integration ready
-
----
-
-## 🚀 Expected Railway Response
-
-```json
-{
-  "status": "healthy",
-  "service": "Structura.AI Backend",
-  "version": "1.0.0"
-}
+### Debug Logging
+```typescript
+// === SUPABASE INSERT DEBUG ===
+console.log("File name:", file.name);
+console.log("File URL:", publicUrl);
+console.log("Category:", category);
+console.log("Extracted data:", extracted_data);
+console.log("Full payload:", {
+  file_name: file.name,
+  file_url: publicUrl,
+  category: category,
+  extracted_data: extracted_data
+});
+// === END DEBUG ===
 ```
 
+### Supabase Schema
+- **file_name**: Text (required)
+- **file_url**: Text (required) 
+- **category**: Text (required)
+- **extracted_data**: JSONB (required)
+- **NO user_id field** - Removed to fix 422 errors
+
+### Error Detection
+- File type validation (PDF only)
+- File size limits
+- Supabase storage errors
+- Database insert errors with detailed logging
+- Network/connection errors
+
+## 🔄 Next Steps
+1. **Upload to GitHub**: https://github.com/rushabhai2025/structura-backend-new
+2. **Commit Message**: "Added Supabase debug upload component — v1.0.0"
+3. **Test in Lovable**: Use component to identify 422 error causes
+4. **Check Console**: Look for "SUPABASE INSERT DEBUG" sections
+5. **Fix Issues**: Based on console output, resolve any data type/validation issues
+
+## 📝 Usage Instructions
+1. Import component into Lovable project
+2. Configure Supabase client path
+3. Test file upload with browser console open
+4. Check debug logs for payload validation
+5. Identify and fix any 422 error causes
+
 ---
-
-## 📝 Notes
-
-- **CORS Status**: ✅ Enabled for all origins (development mode)
-- **Health Endpoint**: ✅ Working and tested locally
-- **Dependencies**: ✅ All required packages in requirements.txt
-- **Railway Ready**: ✅ All configuration files present
-- **Frontend Integration**: ✅ Ready for frontend API calls
-
----
-
-*Generated by Structura.AI Version Tracker v1.0* 
+**Last Updated**: 2024-07-19 19:00
+**Status**: Ready for GitHub upload 
